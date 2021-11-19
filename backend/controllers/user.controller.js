@@ -1,5 +1,6 @@
 const httpCode = require('http-status-codes');
 const User = require("../models/user.model");
+const mongoose = require("mongoose");
 
 function isObjectEmpty(obj) {
   return Object.keys(obj).length === 0;
@@ -42,6 +43,9 @@ const retrieve = async (req, res) => {
       throw "Data is empty";
     }
     let match = {};
+    if (data.id) {
+      match._id = mongoose.Types.ObjectId(data.id);
+    }
     if (data.search) {
       match.$or = [
         {
@@ -63,6 +67,12 @@ const retrieve = async (req, res) => {
         $match: match,
       },
     ]
+    if (data.pageSize && data.pageNum) {
+      let page = Number.parseInt(data.pageNum) - 1;
+      let resultsPerPage = Number.parseInt(data.pageSize);
+      aggregate.push({ $skip: resultsPerPage * page });
+      aggregate.push({ $limit: resultsPerPage });
+    }
     let user = await User.aggregate(aggregate);
     if (user) {
       responseObj = {

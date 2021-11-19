@@ -1,4 +1,4 @@
-# gliapp
+# gliapp-vue.js
 
 ## Project setup
 ```
