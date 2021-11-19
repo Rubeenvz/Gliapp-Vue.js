@@ -32,12 +32,4 @@
   .main-grid__container {
     grid-template-columns: 17.85% 82.15%;
   }
-
-  .main-grid__first {
-    max-width: 257px;
-  }
-
-  .main-grid__second {
-    max-width: 1183px;
-  }
 </style>

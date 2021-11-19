@@ -25,7 +25,7 @@
     </div>
     <div class="main-sidebar__footer p-4">
       <div class="mb-4 bg-tertiary rounded p-3">
-        <div class="flex content-between items-center">
+        <div class="flex justify-between items-center">
           <div>
             <p class="text-sm text-primary">¿Necesitas ayuda?</p>
             <a class="underline text-xs text-primary" href="#">Ir a Sección de ayuda</a>
