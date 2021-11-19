@@ -14,10 +14,18 @@
           </router-link>
         </li>
         <li>
-          <router-link class="block border-b border-tertiary hover:bg-tertiary text-sm text-primary" to="/about">
+          <router-link class="block border-b border-tertiary hover:bg-tertiary text-sm text-primary" to="/administrador">
             <div class="py-3 ml-12 flex items-center content-center">
               <img class="mr-3" alt="Icon" src="../assets/icon_lideres.svg" />
-              <span>Lideres</span>
+              <span>Administrador</span>
+            </div>
+          </router-link>
+        </li>
+        <li>
+          <router-link class="block hover:bg-tertiary text-sm text-primary" to="/mas">
+            <div class="py-3 ml-12 flex items-center content-center">
+              <img class="mr-3" alt="Icon" src="../assets/icon_catalogo.svg" />
+              <span>Más</span>
             </div>
           </router-link>
         </li>
