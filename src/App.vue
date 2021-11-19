@@ -8,7 +8,7 @@
         <div>
           <Nav />
         </div>
-        <div>
+        <div class="p-6">
           <router-view />
         </div>
       </div>
