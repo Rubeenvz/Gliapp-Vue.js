@@ -53,4 +53,21 @@
   .general-form__input {
     @apply border border-tertiary rounded px-2 py-4 text-xs text-primary w-full;
   }
+
+  .toastjs-container {
+    @apply rounded;
+  }
+
+  .toastjs {
+    @apply flex flex-col text-center px-4 py-2 relative;
+  }
+
+  .toastjs.success {
+    @apply border-secondary;
+  }
+
+  .toastjs-btn.toastjs-btn--close {
+    transform: translate(-0%, -50%);
+    @apply button-primary absolute right-0 top-1/2 m-0 p-0;
+  }
 </style>

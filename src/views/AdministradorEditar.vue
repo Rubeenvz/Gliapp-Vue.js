@@ -68,7 +68,18 @@
         let formData = {...this.form}
         delete formData.__v;
         const response = await this.saveUser(formData)
-        console.log(response)
+        if(response.data.status == 200) {
+          /* eslint-disable */
+          new Toast({
+            message: 'Informacíon actualizada',
+            type: 'success'
+          });
+          setTimeout(() => {
+            let elem = document.querySelector('.toastjs-container')
+            elem.parentNode.removeChild(elem);
+          }, 5000);
+          /* eslint-enable */
+        }
       },
     },
     computed: {
