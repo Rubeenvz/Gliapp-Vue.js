@@ -9,7 +9,7 @@
           <router-link exact class="block border-b border-tertiary hover:bg-tertiary text-sm text-primary" to="/">
             <div class="py-3 ml-12 flex items-center content-center">
               <img class="mr-3" alt="Icon" src="../assets/icon_administradores.svg" />
-              <span>Administradores</span>
+              <span class="font-open font-normal">Administradores</span>
             </div>
           </router-link>
         </li>
@@ -17,7 +17,7 @@
           <router-link class="block border-b border-tertiary hover:bg-tertiary text-sm text-primary" to="/administrador">
             <div class="py-3 ml-12 flex items-center content-center">
               <img class="mr-3" alt="Icon" src="../assets/icon_administrador.svg" />
-              <span>Administrador</span>
+              <span class="font-open font-normal">Administrador</span>
             </div>
           </router-link>
         </li>
@@ -25,7 +25,7 @@
           <router-link class="block border-b border-tertiary hover:bg-tertiary text-sm text-primary" to="/crear">
             <div class="py-3 ml-12 flex items-center content-center">
               <img class="mr-3" alt="Icon" src="../assets/icon_lideres.svg" />
-              <span>Crear Administrador</span>
+              <span class="font-open font-normal">Crear Administrador</span>
             </div>
           </router-link>
         </li>
@@ -33,7 +33,7 @@
           <router-link class="block hover:bg-tertiary text-sm text-primary" to="/mas">
             <div class="py-3 ml-12 flex items-center content-center">
               <img class="mr-3" alt="Icon" src="../assets/icon_catalogo.svg" />
-              <span>Más</span>
+              <span class="font-open font-normal">Más</span>
             </div>
           </router-link>
         </li>
@@ -43,8 +43,8 @@
       <div class="mb-4 bg-tertiary rounded p-3">
         <div class="flex justify-between items-center">
           <div>
-            <p class="text-sm text-primary">¿Necesitas ayuda?</p>
-            <a class="underline text-xs text-primary" href="#">Ir a Sección de ayuda</a>
+            <p class="text-sm text-primary font-open font-normal">¿Necesitas ayuda?</p>
+            <a class="underline text-xs text-primary font-open font-normal" href="#">Ir a Sección de ayuda</a>
           </div>
           <div>
             <img alt="External" src="../assets/icon_external.svg" />
@@ -52,7 +52,7 @@
         </div>
       </div>
       <div class="pt-4 border-t border-tertiary text-center">
-        <a class="text-xs text-primary" href="https://rubeenvz.com/">© Copyright <span class="underline">Rubeenvz</span> 2021</a>
+        <a class="text-xs text-primary font-open font-normal" href="https://rubeenvz.com/">© Copyright <span class="underline">Rubeenvz</span> 2021</a>
       </div>
     </div>
   </div>

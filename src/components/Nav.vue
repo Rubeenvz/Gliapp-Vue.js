@@ -9,8 +9,8 @@
       <div class="flex items-center mr-7">
         <div class="main-nav__user bg-white rounded-full mr-2"></div>
         <div>
-          <p class="text-white text-sm">Rubeenvz</p>
-          <p class="text-white text-sm">Recursos Humanos</p>
+          <p class="text-white text-sm font-roboto font-medium">Rubeenvz</p>
+          <p class="text-white text-sm font-roboto font-medium">Recursos Humanos</p>
         </div>
       </div>
       <div>

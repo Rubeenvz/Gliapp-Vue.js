@@ -5,6 +5,11 @@ module.exports = {
   presets: [],
   darkMode: false, // or 'media' or 'class'
   theme: {
+    fontFamily: {
+      'montserrat': 'Montserrat',
+      'open': 'Open Sans',
+      'roboto': 'Roboto'
+    },
     screens: {
       sm: "640px",
       md: "768px",
