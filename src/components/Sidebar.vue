@@ -6,7 +6,7 @@
       </div>
       <ul>
         <li>
-          <router-link class="block border-b border-tertiary hover:bg-tertiary text-sm text-primary" to="/">
+          <router-link exact class="block border-b border-tertiary hover:bg-tertiary text-sm text-primary" to="/">
             <div class="py-3 ml-12 flex items-center content-center">
               <img class="mr-3" alt="Icon" src="../assets/icon_administradores.svg" />
               <span>Administradores</span>
@@ -16,8 +16,16 @@
         <li>
           <router-link class="block border-b border-tertiary hover:bg-tertiary text-sm text-primary" to="/administrador">
             <div class="py-3 ml-12 flex items-center content-center">
-              <img class="mr-3" alt="Icon" src="../assets/icon_lideres.svg" />
+              <img class="mr-3" alt="Icon" src="../assets/icon_administrador.svg" />
               <span>Administrador</span>
+            </div>
+          </router-link>
+        </li>
+        <li>
+          <router-link class="block border-b border-tertiary hover:bg-tertiary text-sm text-primary" to="/crear">
+            <div class="py-3 ml-12 flex items-center content-center">
+              <img class="mr-3" alt="Icon" src="../assets/icon_lideres.svg" />
+              <span>Crear Administrador</span>
             </div>
           </router-link>
         </li>
@@ -66,7 +74,8 @@
     flex-shrink: 0;
   }
 
-  [aria-current] {
+  [aria-current],
+  .router-link-active {
     @apply bg-tertiary;
   }
 </style>

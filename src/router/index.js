@@ -21,21 +21,21 @@ const routes = [
     component: Administrador,
     children: [
       {
-        path: 'ver/:id',
+        path: ':id',
         name: "Ver",
         component: AdministradorVer
       },
       {
-        path: 'crear/:id',
-        name: "Crear",
-        component: AdministradorCrear
-      },
-      {
-        path: 'editar/:id',
+        path: ':id/editar',
         name: "Editar",
         component: AdministradorEditar
-      }
+      },
     ]
+  },
+  {
+    path: "/crear",
+    name: "Crear",
+    component: AdministradorCrear
   },
   {
     path: "/mas",
