@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>Administrador ver</h1>
+    ver
   </div>
 </template>
 

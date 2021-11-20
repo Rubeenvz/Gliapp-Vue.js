@@ -1,11 +1,18 @@
 <template>
   <div>
-    <h1>Administradores</h1>
+    <div>
+      <Breadcrumb title="Administradores de la consola"/>
+    </div>
   </div>
 </template>
 
 <script>
+  import Breadcrumb from "@/components/Breadcrumb.vue";
+
   export default {
-    name: "Administradores"
+    name: "Administradores",
+    components: {
+      Breadcrumb
+    },
   };
 </script>

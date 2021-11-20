@@ -1,11 +1,18 @@
 <template>
   <div>
-    <h1>Administrador - Crear</h1>
+    <div>
+      <Breadcrumb title="Agregar administrador"/>
+    </div>
   </div>
 </template>
 
 <script>
+  import Breadcrumb from "@/components/Breadcrumb.vue";
+  
   export default {
-    name: "AdministradorCrear"
+    name: "AdministradorCrear",
+    components: {
+      Breadcrumb
+    },
   };
 </script>
