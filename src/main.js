@@ -5,9 +5,6 @@ import router from "./router";
 import store from "./store";
 import "./assets/tailwind.css";
 
-import dotenv from 'dotenv'
-dotenv.config()
-
 Vue.config.productionTip = false;
 
 new Vue({
