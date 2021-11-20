@@ -78,6 +78,7 @@
             let elem = document.querySelector('.toastjs-container')
             elem.parentNode.removeChild(elem);
           }, 5000);
+          this.$router.push('/administrador/'+this.id)
           /* eslint-enable */
         }
       },
