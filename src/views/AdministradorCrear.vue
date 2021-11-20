@@ -12,7 +12,7 @@
           <div class="w-full py-12 bg-primary  rounded"></div>
           <div class="text-center p-4">
             <p class="font-normal text-primary font-open text-xs pb-4">Arrastra tu archivo o</p>
-            <button class="px-6 py-3 text-sm font-open text-primary rounded border border-secondary">Selecciona</button>
+            <button class="button-secondary mx-auto">Selecciona</button>
           </div>
         </div>
         <form class="general-form__container flex flex-col gap-5">

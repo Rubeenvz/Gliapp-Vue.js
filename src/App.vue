@@ -34,11 +34,11 @@
   }
 
   .button-primary {
-    @apply block text-sm text-white font-normal px-4 py-3 rounded bg-secondary;
+    @apply block font-open text-sm text-white font-normal px-4 py-3 rounded bg-secondary;
   }
 
   .button-secondary {
-    @apply block text-sm  font-normal px-4 py-3 rounded border border-secondary text-primary;
+    @apply block text-sm font-open font-normal px-4 py-3 rounded border border-secondary text-primary;
   }
 
   .general-form__container {
@@ -47,11 +47,11 @@
 
   .general-form__label {
     transform: translate(-0%, -50%);
-    @apply mx-2 px-2 absolute bg-white text-xs text-primary;
+    @apply mx-2 px-2 absolute font-open bg-white text-xs text-primary;
   }
 
   .general-form__input {
-    @apply border border-tertiary rounded px-2 py-4 text-xs text-primary w-full;
+    @apply border border-tertiary font-open rounded px-2 py-4 text-xs text-primary w-full;
   }
 
   .toastjs-container {
