@@ -27,6 +27,16 @@ export default new Vuex.Store({
         console.log(error)
       }
     },
+    async saveUser({ commit }, data) {
+      try {
+        const res = await axios.put(`http://localhost:4800/api/user`, data)
+        commit('setUser', res.data.data)
+        return res
+      } catch (error) {
+        commit('setUser', {})
+        console.log(error)
+      }
+    },
   },
   modules: {},
 });

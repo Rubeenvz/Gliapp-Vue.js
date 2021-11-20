@@ -30,8 +30,8 @@
         </div>
       </div>
     </div>
-    <div class="pt-4 border-t border-tertiary">
-      <router-link class="font-open text-white font-normal px-4 py-3 rounded bg-secondary" :to="'/administrador/'+id+'/editar'">
+    <div class="pt-4 border-t border-tertiary flex">
+      <router-link class="button-primary" :to="'/administrador/'+id+'/editar'">
         Editar administrador
       </router-link>
     </div>
@@ -46,11 +46,12 @@
     name: "AdministradorVer",
     data() {
       return {
-        area, status
+        area,
+        status
       }
     },
     methods: {
-    ...mapActions(['getUser']),
+      ...mapActions(['getUser']),
     },
     computed: {
       ...mapState(['user']),

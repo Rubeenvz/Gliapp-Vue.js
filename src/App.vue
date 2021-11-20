@@ -32,4 +32,25 @@
   .main-grid__container {
     grid-template-columns: 17.85% 82.15%;
   }
+
+  .button-primary {
+    @apply block text-sm text-white font-normal px-4 py-3 rounded bg-secondary;
+  }
+
+  .button-secondary {
+    @apply block text-sm  font-normal px-4 py-3 rounded border border-secondary text-primary;
+  }
+
+  .general-form__container {
+    max-width: 360px;
+  }
+
+  .general-form__label {
+    transform: translate(-0%, -50%);
+    @apply mx-2 px-2 absolute bg-white text-xs text-primary;
+  }
+
+  .general-form__input {
+    @apply border border-tertiary rounded px-2 py-4 text-xs text-primary w-full;
+  }
 </style>

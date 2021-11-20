@@ -98,11 +98,11 @@ const update = async (req, res) => {
   };
   try {
     let data = {...req.body};
-    let { email } = {...req.body};
-    if(!email) {
+    let { _id } = {...req.body};
+    if(!_id) {
       throw "Email is not defined";
     }
-    let removeUser = await User.findOneAndUpdate({email}, {$set:data}, {new: true,});
+    let removeUser = await User.findOneAndUpdate({_id}, {$set:data}, {new: true,});
     if (removeUser) {
       responseObj = {
         status: httpCode.StatusCodes.OK,
