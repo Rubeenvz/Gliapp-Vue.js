@@ -1,23 +1,46 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import Home from "../views/Home.vue";
+import Administradores from "../views/Administradores.vue";
+import Administrador from "../views/Administrador.vue";
+import AdministradorVer from "../views/AdministradorVer.vue";
+import AdministradorCrear from "../views/AdministradorCrear.vue";
+import AdministradorEditar from "../views/AdministradorEditar.vue";
+import Mas from "../views/Mas.vue";
 
 Vue.use(VueRouter);
 
 const routes = [
   {
     path: "/",
-    name: "Home",
-    component: Home,
+    name: "Administradores",
+    component: Administradores
   },
   {
-    path: "/about",
-    name: "About",
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () =>
-      import(/* webpackChunkName: "about" */ "../views/About.vue"),
+    path: "/administrador",
+    name: "Administrador",
+    component: Administrador,
+    children: [
+      {
+        path: ':id',
+        name: "Ver",
+        component: AdministradorVer
+      },
+      {
+        path: ':id/editar',
+        name: "Editar",
+        component: AdministradorEditar
+      },
+    ]
+  },
+  {
+    path: "/crear",
+    name: "Crear",
+    component: AdministradorCrear
+  },
+  {
+    path: "/mas",
+    name: "Mas",
+    component: Mas
   },
 ];
 

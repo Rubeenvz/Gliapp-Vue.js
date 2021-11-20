@@ -1,0 +1,105 @@
+{
+	"info": {
+		"_postman_id": "2191b78d-3aef-4b63-8427-407101dc2304",
+		"name": "Gliapp",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "POST - CREATE",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"Héctor\",\n  \"last_name\": \"Vázquez\",\n  \"email\": \"rubeenvz@outlook.com\",\n  \"status\": \"active\",\n  \"area\": \"IT\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:4800/api/user/"
+			},
+			"response": []
+		},
+		{
+			"name": "GET - RETRIEVE - ALL",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"pageSize\": 5,\n    \"pageNum\": 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:4800/api/user/"
+			},
+			"response": []
+		},
+		{
+			"name": "GET - RETRIEVE - ONE",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": \"6195e45cfc099d99e085c0a3\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:4800/api/user/"
+			},
+			"response": []
+		},
+		{
+			"name": "PUT - UPDATE",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"Héctor Actualizado\",\n  \"last_name\": \"Vázquez\",\n  \"email\": \"rubeenvz@outlook.com\",\n  \"status\": \"active\",\n  \"area\": \"IT\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:4800/api/user/"
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE - DELETE",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"email\": \"rubeenvz@outlook.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:4800/api/user/"
+			},
+			"response": []
+		}
+	]
+}
