@@ -4,7 +4,7 @@
       <div class="mt-6">
         <p class="font-normal text-sm text-primary font-open">Sube tu fotografía con un peso menos de 2MB</p>
       </div>
-      <div class="my-4 adm-user__card border border-tertiary rounded">
+      <div class="adm-user__card">
         <div class="w-full py-12 bg-primary  rounded"></div>
         <div class="text-center p-4">
           <p class="font-normal text-primary font-open text-xs pb-4">Arrastra tu archivo o</p>
@@ -95,9 +95,3 @@
     },
   };
 </script>
-
-<style scoped>
-  .adm-user__card {
-    max-width: 200px;
-  }
-</style>

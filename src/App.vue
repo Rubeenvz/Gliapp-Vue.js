@@ -70,4 +70,9 @@
     transform: translate(-0%, -50%);
     @apply button-primary absolute right-0 top-1/2 m-0 p-0;
   }
+
+  .adm-user__card {
+    max-width: 200px;
+    @apply mt-4 mb-6 border border-tertiary rounded;
+  }
 </style>
