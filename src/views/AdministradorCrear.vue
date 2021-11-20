@@ -39,7 +39,7 @@
         </form>
       </div>
       <div class="pt-4 border-t border-tertiary flex gap-6">
-        <router-link class="button-secondary" to="/administradores">
+        <router-link class="button-secondary" to="/">
           Cancelar
         </router-link>
         <button @click="saveData()" class="button-primary">
@@ -52,7 +52,7 @@
         <div class="approved bg-secondary flex items-center justify-center rounded-full py-6">
           <img class="" src="../assets/icon_approved.svg" alt="Approved">
         </div>
-        <div>
+        <div class="mt-4">
           <h2 class="font-semibold text-xl font-montserrat text-primary text-base">Cambios guardados.</h2>
           <p class="font-open font-normal text-sm">Tu administrador se ha guardado con éxito.</p>
         </div>
@@ -61,7 +61,7 @@
         <button @click="isSaved = false" class="button-secondary">
           Añadir nuevo
         </button>
-        <router-link to="/administradores" class="button-primary">
+        <router-link to="/" class="button-primary">
           Regresar a mis administradores
         </router-link>
       </div>
