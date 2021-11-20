@@ -3,9 +3,9 @@
     <div>
       <Breadcrumb title="Agregar administrador"/>
     </div>
-    <div>
-      <div class="mb-9">
-        <div class="mt-6">
+    <div v-if="!isSaved">
+      <div class="mb-9 mt-6">
+        <div>
           <p class="font-normal text-sm text-primary font-open">Sube tu fotografía con un peso menos de 2MB</p>
         </div>
         <div class="adm-user__card">
@@ -47,6 +47,25 @@
         </button>
       </div>
     </div>
+    <div v-else>
+      <div class="mb-9 mt-6">
+        <div class="approved bg-secondary flex items-center justify-center rounded-full py-6">
+          <img class="" src="../assets/icon_approved.svg" alt="Approved">
+        </div>
+        <div>
+          <h2 class="font-semibold text-xl font-montserrat text-primary text-base">Cambios guardados.</h2>
+          <p class="font-open font-normal text-sm">Tu administrador se ha guardado con éxito.</p>
+        </div>
+      </div>
+      <div class="pt-4 border-t border-tertiary flex gap-6">
+        <button @click="isSaved = false" class="button-secondary">
+          Añadir nuevo
+        </button>
+        <router-link to="/administradores" class="button-primary">
+          Regresar a mis administradores
+        </router-link>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -64,7 +83,8 @@
       return {
         area,
         status,
-        form: {}
+        form: {},
+        isSaved: false
       }
     },
     methods: {
@@ -81,10 +101,17 @@
             let elem = document.querySelector('.toastjs-container')
             elem.parentNode.removeChild(elem);
           }, 5000);
-          this.$router.push('/administradores')
+          this.isSaved = true
           /* eslint-enable */
         }
       },
     },
   };
 </script>
+
+<style>
+  .approved {
+    width: 52px;
+    height: 52px;
+  }
+</style>

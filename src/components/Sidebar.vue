@@ -9,7 +9,7 @@
           <router-link exact class="block border-b border-tertiary hover:bg-tertiary text-sm text-primary" to="/">
             <div class="py-3 ml-12 flex items-center content-center">
               <img class="mr-3" alt="Icon" src="../assets/icon_administradores.svg" />
-              <span class="font-open font-normal">Administradores</span>
+              <span class="font-open font-normal text-sm">Administradores</span>
             </div>
           </router-link>
         </li>
@@ -17,7 +17,7 @@
           <router-link class="block border-b border-tertiary hover:bg-tertiary text-sm text-primary" to="/administrador">
             <div class="py-3 ml-12 flex items-center content-center">
               <img class="mr-3" alt="Icon" src="../assets/icon_administrador.svg" />
-              <span class="font-open font-normal">Administrador</span>
+              <span class="font-open font-normal text-sm">Administrador</span>
             </div>
           </router-link>
         </li>
@@ -25,7 +25,7 @@
           <router-link class="block border-b border-tertiary hover:bg-tertiary text-sm text-primary" to="/crear">
             <div class="py-3 ml-12 flex items-center content-center">
               <img class="mr-3" alt="Icon" src="../assets/icon_lideres.svg" />
-              <span class="font-open font-normal">Crear Administrador</span>
+              <span class="font-open font-normal text-sm">Crear Administrador</span>
             </div>
           </router-link>
         </li>
@@ -33,7 +33,7 @@
           <router-link class="block hover:bg-tertiary text-sm text-primary" to="/mas">
             <div class="py-3 ml-12 flex items-center content-center">
               <img class="mr-3" alt="Icon" src="../assets/icon_catalogo.svg" />
-              <span class="font-open font-normal">Más</span>
+              <span class="font-open font-normal text-sm">Más</span>
             </div>
           </router-link>
         </li>

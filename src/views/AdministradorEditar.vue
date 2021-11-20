@@ -42,7 +42,7 @@
       <router-link class="button-secondary" :to="'/administrador/'+id">
         Cancelar
       </router-link>
-      <button @click="saveData()" class="button-primary" :to="'/administrador/'+id">
+      <button @click="saveData()" class="button-primary">
         Guardar cambios
       </button>
     </div>
