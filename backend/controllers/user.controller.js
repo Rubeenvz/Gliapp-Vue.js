@@ -38,7 +38,7 @@ const retrieve = async (req, res) => {
     data: {}
   };
   try {
-    let data = {...req.body};
+    let data = {...req.query};
     if(isObjectEmpty(data)) {
       throw "Data is empty";
     }
@@ -74,6 +74,9 @@ const retrieve = async (req, res) => {
       aggregate.push({ $limit: resultsPerPage });
     }
     let user = await User.aggregate(aggregate);
+    if (data.id) {
+      user = user[0]
+    }
     if (user) {
       responseObj = {
         status: httpCode.StatusCodes.OK,
