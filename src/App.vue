@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <div class="main-grid__container min-h-screen lg:grid grid-flow-col">
-      <div class="main-grid__first h-full fixed lg:relative lg:border-r border-tertiary w-full" id="Sidebar">
+      <div class="main-grid__first h-full fixed lg:relative lg:border-r border-tertiary w-full bg-white transition-all ease-in-out duration-300" id="Sidebar">
         <Sidebar />
       </div>
       <div class="main-grid__second h-full w-full">

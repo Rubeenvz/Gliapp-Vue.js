@@ -38,7 +38,7 @@
           </router-link>
         </li>
         <li>
-          <button class="block bg-secondary text-sm text-primary w-full lg:hidden">
+          <button @click="toggleMenu()" class="block bg-secondary text-sm text-primary w-full lg:hidden">
             <div class="py-3 flex items-center justify-center content-center text-center">
               <span class="font-open font-normal text-sm text-white">Cerrar</span>
             </div>
@@ -67,7 +67,12 @@
 
 <script>
   export default {
-    name: "Sidebar"
+    name: "Sidebar",
+    methods: {
+      toggleMenu() {
+        document.querySelector('.main-grid__first').classList.toggle('active')
+      }
+    }
   };
 </script>
 

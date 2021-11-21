@@ -1,6 +1,6 @@
 <template>
   <div class="flex justify-between lg:justify-end w-full py-5 px-6 lg:px-16 bg-secondary">
-    <button class="text-white text-sm font-roboto font-medium lg:hidden">
+    <button @click="toggleMenu()" class="text-white text-sm font-roboto font-medium lg:hidden">
       MENU
     </button>
     <div class="flex items-center">
@@ -25,7 +25,12 @@
 
 <script>
   export default {
-    name: "Nav"
+    name: "Nav",
+    methods: {
+      toggleMenu() {
+        document.querySelector('.main-grid__first').classList.toggle('active')
+      }
+    }
   };
 </script>
 
