@@ -85,4 +85,10 @@
     height: 40px;
     @apply bg-primary rounded-full;
   }
+
+  .approved {
+    width: 52px;
+    height: 52px;
+    @apply bg-secondary flex items-center justify-center rounded-full py-6;
+  }
 </style>

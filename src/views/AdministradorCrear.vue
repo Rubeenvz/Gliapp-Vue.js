@@ -49,7 +49,7 @@
     </div>
     <div v-else>
       <div class="mb-9 mt-6">
-        <div class="approved bg-secondary flex items-center justify-center rounded-full py-6">
+        <div class="approved">
           <img class="" src="../assets/icon_approved.svg" alt="Approved">
         </div>
         <div class="mt-4">
@@ -109,10 +109,3 @@
     },
   };
 </script>
-
-<style>
-  .approved {
-    width: 52px;
-    height: 52px;
-  }
-</style>
