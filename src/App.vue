@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <div class="main-grid__container min-h-screen lg:grid grid-flow-col">
-      <div class="main-grid__first h-full fixed lg:relative lg:border-r border-tertiary w-full bg-white transition-all ease-in-out duration-300" id="Sidebar">
+      <div class="main-grid__first z-50 h-full fixed lg:relative lg:border-r border-tertiary w-full bg-white transition-all ease-in-out duration-300" id="Sidebar">
         <Sidebar />
       </div>
       <div class="main-grid__second h-full w-full">
@@ -48,11 +48,11 @@
   }
 
   .button-primary {
-    @apply block font-open text-sm text-white font-normal px-4 py-3 rounded bg-secondary;
+    @apply block font-open text-sm text-white font-normal px-4 py-3 rounded bg-secondary text-center;
   }
 
   .button-secondary {
-    @apply block text-sm font-open font-normal px-4 py-3 rounded border border-secondary text-primary;
+    @apply block text-sm font-open font-normal px-4 py-3 rounded border border-secondary text-primary text-center;
   }
 
   @media (min-width: 1024px) {

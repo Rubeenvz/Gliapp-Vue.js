@@ -3,9 +3,9 @@
     <div>
       <Breadcrumb title="Administradores de la consola"/>
     </div>
-    <div class="hidden lg:block" v-if="totalResults != 0">
-      <div class="mt-6 flex justify-between">
-        <div class="flex gap-4">
+    <div v-if="totalResults != 0">
+      <div class="mt-6 flex justify-between flex-col-reverse lg:flex-row">
+        <div class="flex gap-4 mt-6 lg:mt-0">
           <div class="flex items-center px-4 rounded-full bg-tertiary gap-4">
             <img src="../assets/icon_search-gray.svg" alt="Search">
             <input v-model="search" class="bg-transparent font-normal text-sm text-primary font-open" type="text" placeholder="Buscar">
@@ -16,7 +16,7 @@
             </button>
           </div>
         </div>
-        <div class="flex gap-6">
+        <div class="flex gap-6 flex-col lg:flex-row">
           <button class="button-secondary">
             Descargar
           </button>
@@ -25,10 +25,10 @@
           </router-link>
         </div>
       </div>
-      <div class="mt-6">
+      <div class="mt-6 overflow-scroll">
         <table class="w-full">
           <tr class="text-left">
-            <th><input type="checkbox"></th>
+            <th class="hidden lg:table-cell"><input type="checkbox"></th>
             <th><p class="text-sm text-primary font-montserrat font-semibold">Administradores</p></th>
             <th><p class="text-sm text-primary font-montserrat font-semibold">Área</p></th>
             <th><p class="text-sm text-primary font-montserrat font-semibold">Email</p></th>
@@ -37,10 +37,10 @@
           </tr>
           <tbody>
             <tr class="text-left" v-for="us in user" :key="us._id">
-              <td><input type="checkbox"></td>
+              <td class="hidden lg:table-cell"><input type="checkbox"></td>
               <td>
                 <div class="flex gap-4 items-center">
-                  <div class="adm-user__img"></div>
+                  <div class="adm-user__img hidden lg:block"></div>
                   <router-link class="text-sm text-primary font-open font-semibold" :to="'/administrador/'+us._id+''">
                     {{us.name}} {{us.last_name}}
                   </router-link>
@@ -50,7 +50,7 @@
               <td><p class="text-sm text-primary font-open">{{us.email}}</p></td>
               <td><p class="tag text-sm text-primary font-open" :class="us.status" >{{status[us.status]}}</p></td>
               <td>
-                <div class="flex items-center gap-4">
+                <div class="flex items-center gap-4 flex-col lg:flex-row">
                   <router-link :to="'/administrador/'+us._id+'/editar'">
                     <img src="../assets/icon_editar.svg" alt="Editar">
                   </router-link>
@@ -67,16 +67,16 @@
         </table>
       </div>
       <div class="mt-6">
-        <div class="flex justify-end gap-6">
-          <div class="flex gap-6">
+        <div class="flex justify-end gap-6 flex-col-reverse lg:flex-row">
+          <div class="flex gap-6 flex-col lg:flex-row text-center">
             <p class="text-sm text-primary font-roboto">Rows per page :</p>
-            <input class="w-max text-sm text-primary font-roboto" v-model="pageSize" type="number" value="5">
+            <input class="w-full lg:w-max text-sm text-primary font-roboto text-center" v-model="pageSize" type="number" value="5">
           </div>
-          <div>
-            <button @click="left()" class="px-4">
+          <div class="flex justify-center lg:block gap-6">
+            <button @click="left()" class="py-4 px-4 lg:py-0 lg:px-4">
               <img src="../assets/icon_left.svg" alt="Izquierda">
             </button>
-            <button @click="right()" class="px-4">
+            <button @click="right()" class="py-4 px-4 lg:py-0 lg:px-4">
               <img src="../assets/icon_right.svg" alt="Derecha">
             </button>
           </div>
