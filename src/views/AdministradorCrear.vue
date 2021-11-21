@@ -102,6 +102,7 @@
             elem.parentNode.removeChild(elem);
           }, 5000);
           this.isSaved = true
+          this.form = {}
           /* eslint-enable */
         }
       },

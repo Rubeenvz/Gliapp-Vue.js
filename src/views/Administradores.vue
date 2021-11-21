@@ -3,21 +3,21 @@
     <div>
       <Breadcrumb title="Administradores de la consola"/>
     </div>
-    <div v-if="user.lenght != 0">
+    <div v-if="totalResults != 0">
       <div class="mt-6 flex justify-between">
         <div class="flex gap-4">
           <div class="flex items-center px-4 rounded-full bg-tertiary gap-4">
             <img src="../assets/icon_search-gray.svg" alt="Search">
-            <input class="bg-transparent font-normal text-sm text-primary font-open" type="text" placeholder="Buscar">
+            <input v-model="search" class="bg-transparent font-normal text-sm text-primary font-open" type="text" placeholder="Buscar">
           </div>
           <div>
-            <button @click="isSaved = false" class="button-secondary bg-tertiary border-tertiary">
+            <button @click="getData()" class="button-secondary bg-tertiary border-tertiary">
               Buscar
             </button>
           </div>
         </div>
         <div class="flex gap-6">
-          <button @click="isSaved = false" class="button-secondary">
+          <button class="button-secondary">
             Descargar
           </button>
           <router-link to="/crear" class="button-primary">
@@ -107,13 +107,24 @@
         status,
         pageSize: 5,
         pageNum: 1,
-        totalResults: 10
+        totalResults: 10,
+        search: ''
       }
     },
     methods: {
       ...mapActions(['getUser', 'removeUser']),
       async getData() {
-        let res = await this.getUser({pageSize: this.pageSize, pageNum: this.pageNum})
+        let data = {
+          pageSize: this.pageSize,
+          pageNum: this.pageNum
+        }
+        if(this.search != '') {
+          data.search = this.search
+        }
+        else {
+          delete data.search
+        }
+        let res = await this.getUser(data)
         this.totalResults = res.data.total
       },
       async remove(_id) {
