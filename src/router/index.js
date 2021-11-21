@@ -39,7 +39,7 @@ const routes = [
   },
   {
     path: "/mas",
-    name: "Mas",
+    name: "Más",
     component: Mas
   },
 ];

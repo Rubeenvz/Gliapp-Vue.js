@@ -46,22 +46,27 @@
 		},
 		{
 			"name": "GET - RETRIEVE - ONE",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
 			"request": {
 				"method": "GET",
 				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n    \"id\": \"6195e45cfc099d99e085c0a3\"\n}",
-					"options": {
-						"raw": {
-							"language": "json"
+				"url": {
+					"raw": "localhost:4800/api/user/?id=6195e45cfc099d99e085c0a3",
+					"host": [
+						"localhost"
+					],
+					"port": "4800",
+					"path": [
+						"api",
+						"user",
+						""
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "6195e45cfc099d99e085c0a3"
 						}
-					}
-				},
-				"url": "localhost:4800/api/user/"
+					]
+				}
 			},
 			"response": []
 		},

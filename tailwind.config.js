@@ -5,11 +5,6 @@ module.exports = {
   presets: [],
   darkMode: false, // or 'media' or 'class'
   theme: {
-    fontFamily: {
-      'montserrat': 'Montserrat',
-      'open': 'Open Sans',
-      'roboto': 'Roboto'
-    },
     screens: {
       sm: "640px",
       md: "768px",
@@ -23,6 +18,10 @@ module.exports = {
       primary: "#323232",
       secondary: "#4FB9BB",
       tertiary: "#E8EAF0",
+      cgreen: "#4CAF50",
+      cgreenlight: "#E8F5E9",
+      cred: "#EB5757",
+      credlight: "#FFE1E0",
       black: colors.black,
       white: colors.white,
       gray: colors.coolGray,
@@ -254,6 +253,9 @@ module.exports = {
       DEFAULT: "1",
     },
     fontFamily: {
+      'montserrat': 'Montserrat',
+      'open': 'Open Sans',
+      'roboto': 'Roboto',
       sans: [
         "ui-sans-serif",
         "system-ui",
