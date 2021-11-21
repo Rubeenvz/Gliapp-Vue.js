@@ -1,24 +1,30 @@
 # gliapp-vue.js
 
-## Project setup
+### Comandos para ejecutar el software
+
+#### Instalar mongodb (macOS)
 ```
-npm install
+xcode-select --install
+brew tap mongodb/brew
+brew install mongodb-community@5.0
+brew services start mongodb-community@5.0
 ```
 
-### Compiles and hot-reloads for development
+#### Instalar modulos frontend (macOS/Linux/Windows)
 ```
-npm run serve
+npm i
 ```
-
-### Compiles and minifies for production
+#### Ejecutar frontend (macOS/Linux/Windows)
 ```
 npm run build
 ```
 
-### Lints and fixes files
+#### Instalar modulos backend (macOS/Linux/Windows)
 ```
-npm run lint
+cd backend
+npm i
 ```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+#### Ejecutar frontend (macOS/Linux/Windows)
+```
+npm run dev
+```
