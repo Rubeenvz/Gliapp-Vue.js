@@ -91,7 +91,7 @@
       ...mapActions(['createUser']),
       async saveData() {
         const response = await this.createUser(this.form)
-        if(response && response.data && response.data.status == 200) {
+        if(response && response.data.status == 200) {
           /* eslint-disable */
           new Toast({
             message: 'Administrador añadido',

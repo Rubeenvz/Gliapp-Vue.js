@@ -21,8 +21,8 @@ export default new Vuex.Store({
       });
       try {
         const res = await axios.get(`http://localhost:4800/api/${url}`)
-        console.log(res)
         commit('setUser', res.data.data)
+        return res
       } catch (error) {
         commit('setUser', {})
         console.log(error)
@@ -40,7 +40,6 @@ export default new Vuex.Store({
     },
     async createUser({ commit }, data) {
       try {
-        console.log(data)
         const res = await axios.post(`http://localhost:4800/api/user`, data)
         return res
       } catch (error) {
@@ -48,6 +47,15 @@ export default new Vuex.Store({
         console.log(error)
       }
     },
+    async removeUser({ commit }, data) {
+      try {
+        const res = await axios.delete(`http://localhost:4800/api/user/?_id=${data._id}`)
+        return res
+      } catch (error) {
+        commit('setUser', {})
+        console.log(error)
+      }
+    }
   },
   modules: {},
 });

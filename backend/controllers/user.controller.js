@@ -39,6 +39,7 @@ const retrieve = async (req, res) => {
   };
   try {
     let data = {...req.query};
+    console.log(data)
     if(isObjectEmpty(data)) {
       throw "Data is empty";
     }
@@ -77,16 +78,16 @@ const retrieve = async (req, res) => {
     if (data.id) {
       user = user[0]
     }
-    if (data.pageSize && data.pageNum) {
-      const total = await User.aggregate(aggregate.slice(0, 3));
-      responseObj.total = total
-    }
     if (user) {
       responseObj = {
         status: httpCode.StatusCodes.OK,
         message: httpCode.getReasonPhrase(httpCode.StatusCodes.OK),
         data: user
       };
+      if(data.pageSize && data.pageNum) {
+        const total = await User.aggregate(aggregate.slice(0, 1));
+        responseObj.total = total.length
+      }
     }
   } catch (err) {
     console.log(err)
@@ -104,7 +105,7 @@ const update = async (req, res) => {
     let data = {...req.body};
     let { _id } = {...req.body};
     if(!_id) {
-      throw "Email is not defined";
+      throw "ID is not defined";
     }
     let removeUser = await User.findOneAndUpdate({_id}, {$set:data}, {new: true,});
     if (removeUser) {
@@ -128,11 +129,11 @@ const remove = async (req, res) => {
     data: {}
   };
   try {
-    let { email } = {...req.body};
-    if(!email) {
-      throw "Email is not defined";
+    let { _id } = {...req.query};
+    if(!_id) {
+      throw "ID is not defined";
     }
-    let removeUser = await User.findOneAndRemove({email});
+    let removeUser = await User.findOneAndRemove({_id});
     if (removeUser) {
       responseObj = {
         status: httpCode.StatusCodes.OK,

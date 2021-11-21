@@ -54,7 +54,7 @@
                   <router-link :to="'/administrador/'+us._id+'/editar'">
                     <img src="../assets/icon_editar.svg" alt="Editar">
                   </router-link>
-                  <button>
+                  <button @click="remove(us._id)">
                     <img src="../assets/icon_eliminar.svg" alt="Eliminar">
                   </button>
                   <router-link :to="'/administrador/'+us._id+''">
@@ -70,13 +70,13 @@
         <div class="flex justify-end gap-6">
           <div class="flex gap-6">
             <p class="text-sm text-primary font-roboto">Rows per page :</p>
-            <input class="w-max text-sm text-primary font-roboto" type="number" value="5">
+            <input class="w-max text-sm text-primary font-roboto" v-model="pageSize" type="number" value="5">
           </div>
           <div>
-            <button class="px-4">
+            <button @click="left()" class="px-4">
               <img src="../assets/icon_left.svg" alt="Izquierda">
             </button>
-            <button class="px-4">
+            <button @click="right()" class="px-4">
               <img src="../assets/icon_right.svg" alt="Derecha">
             </button>
           </div>
@@ -104,17 +104,60 @@
     data() {
       return {
         area,
-        status
+        status,
+        pageSize: 5,
+        pageNum: 1,
+        totalResults: 10
       }
     },
     methods: {
-      ...mapActions(['getUser']),
+      ...mapActions(['getUser', 'removeUser']),
+      async getData() {
+        let res = await this.getUser({pageSize: this.pageSize, pageNum: this.pageNum})
+        this.totalResults = res.data.total
+      },
+      async remove(_id) {
+        const response = await this.removeUser({_id})
+        if(response && response.data.status == 200) {
+          /* eslint-disable */
+          new Toast({
+            message: 'Administrador eliminado',
+            type: 'success'
+          });
+          setTimeout(() => {
+            let elem = document.querySelector('.toastjs-container')
+            elem.parentNode.removeChild(elem);
+          }, 5000);
+          this.getData()
+          /* eslint-enable */
+        }
+      },
+      left() {
+        if(this.pageNum == 1) {
+          return
+        }
+        this.pageNum--
+      },
+      right() {
+        if(this.pageNum + 1 > Math.ceil(this.totalResults/this.pageSize)) {
+          return
+        }
+        this.pageNum++
+      }
     },
     computed: {
       ...mapState(['user']),
     },
+    watch: {
+      async pageSize() {
+        this.getData()
+      },
+      async pageNum() {
+        this.getData()
+      }
+    },
     async mounted() {
-      await this.getUser({pageSize: 5, pageNum: 1})
+      this.getData()
     },
   };
 </script>
@@ -131,10 +174,10 @@
   }
 
   .tag {
-    @apply rounded-t-sm px-2 w-max py-1 text-center;
+    @apply uppercase rounded-t-sm px-2 w-max py-1 text-center;
   }
 
-  .tag.active {
+  .tag.inactive {
     @apply text-cred bg-credlight;
   }
 

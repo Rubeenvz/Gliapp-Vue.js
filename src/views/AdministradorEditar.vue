@@ -68,7 +68,7 @@
         let formData = {...this.form}
         delete formData.__v;
         const response = await this.saveUser(formData)
-        if(response.data.status == 200) {
+        if(response && response.data.status == 200) {
           /* eslint-disable */
           new Toast({
             message: 'Informacíon actualizada',

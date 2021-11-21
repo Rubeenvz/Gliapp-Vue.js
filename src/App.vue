@@ -29,6 +29,10 @@
 </script>
 
 <style>
+  input {
+    @apply focus:outline-none;
+  }
+
   .main-grid__container {
     grid-template-columns: 17.85% 82.15%;
   }
