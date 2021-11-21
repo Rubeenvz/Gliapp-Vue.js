@@ -2,12 +2,12 @@
   <div>
     <div class="pt-6 mb-9">
       <div class="mb-6">
-        <div class="adm-user__img"></div>
-        <div class="mt-4">
+        <div class="adm-user__img mx-auto lg:mx-0"></div>
+        <div class="mt-4 text-center lg:text-left">
           <h2 class="font-open font-semibold text-primary">{{ user.name }} {{ user.last_name }} </h2>
         </div>
       </div>
-      <div class="adm-user__grid grid">
+      <div class="adm-user__grid grid text-center lg:text-left">
         <div>
           <p class="font-normal text-xs uppercase text-primary font-open">Nombre (s)</p>
           <p class="font-semibold text-base text-primary font-open">{{ user.name }}</p>
@@ -30,7 +30,7 @@
         </div>
       </div>
     </div>
-    <div class="pt-4 border-t border-tertiary flex">
+    <div class="pt-4 border-t border-tertiary flex justify-center lg:justify-start">
       <router-link class="button-primary" :to="'/administrador/'+id+'/editar'">
         Editar administrador
       </router-link>
@@ -69,5 +69,11 @@
   .adm-user__grid {
     grid-template-columns: auto auto auto;
     row-gap: 26px;
+  }
+  @media (max-width: 1023.98px) {
+    .adm-user__grid {
+    grid-template-columns: 100%;
+      row-gap: 26px;
+    }
   }
 </style>

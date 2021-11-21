@@ -15,7 +15,7 @@
             <button class="button-secondary mx-auto">Selecciona</button>
           </div>
         </div>
-        <form class="general-form__container flex flex-col gap-5">
+        <form class="general-form__container flex flex-col gap-5 w-full">
           <div class="general-form__element relative w-full">
             <label class="general-form__label" for="">Nombre</label>
             <input required class="general-form__input" v-model="form.name" type="text">
@@ -44,7 +44,7 @@
           </div>
         </form>
       </div>
-      <div class="pt-4 border-t border-tertiary flex gap-6">
+      <div class="pt-4 border-t border-tertiary flex justify-center lg:justify-start gap-6 flex-col lg:flex-row">
         <router-link class="button-secondary" to="/">
           Cancelar
         </router-link>
@@ -58,12 +58,12 @@
         <div class="approved">
           <img class="" src="../assets/icon_approved.svg" alt="Approved">
         </div>
-        <div class="mt-4">
+        <div class="mt-4 text-center lg:text-left">
           <h2 class="font-semibold font-montserrat text-primary text-base">Cambios guardados.</h2>
           <p class="font-open font-normal text-sm">Tu administrador se ha guardado con éxito.</p>
         </div>
       </div>
-      <div class="pt-4 border-t border-tertiary flex gap-6">
+      <div class="pt-4 border-t border-tertiary flex justify-center lg:justify-start gap-6 flex-col lg:flex-row">
         <button @click="isSaved = false" class="button-secondary">
           Añadir nuevo
         </button>

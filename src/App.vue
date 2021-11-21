@@ -1,10 +1,10 @@
 <template>
   <div id="app">
-    <div class="main-grid__container min-h-screen grid grid-flow-col">
-      <div class="main-grid__first h-full border-r border-tertiary" id="Sidebar">
+    <div class="main-grid__container min-h-screen lg:grid grid-flow-col">
+      <div class="main-grid__first h-full fixed lg:relative lg:border-r border-tertiary w-full" id="Sidebar">
         <Sidebar />
       </div>
-      <div class="main-grid__second h-full">
+      <div class="main-grid__second h-full w-full">
         <div>
           <Nav />
         </div>
@@ -37,6 +37,16 @@
     grid-template-columns: 17.85% 82.15%;
   }
 
+  @media (max-width: 1023.98px) {
+    .main-grid__first {
+      left: -100%;
+    }
+
+    .main-grid__first.active {
+      left: 0%;
+    }
+  }
+
   .button-primary {
     @apply block font-open text-sm text-white font-normal px-4 py-3 rounded bg-secondary;
   }
@@ -45,8 +55,10 @@
     @apply block text-sm font-open font-normal px-4 py-3 rounded border border-secondary text-primary;
   }
 
-  .general-form__container {
-    max-width: 360px;
+  @media (min-width: 1024px) {
+    .general-form__container {
+      max-width: 360px;
+    }
   }
 
   .general-form__label {
@@ -77,7 +89,7 @@
 
   .adm-user__card {
     max-width: 200px;
-    @apply mt-4 mb-6 border border-tertiary rounded;
+    @apply mt-4 mb-6 border border-tertiary rounded mx-auto lg:mx-0;
   }
 
   .adm-user__img {
@@ -89,7 +101,7 @@
   .approved {
     width: 52px;
     height: 52px;
-    @apply bg-secondary flex items-center justify-center rounded-full py-6;
+    @apply bg-secondary flex items-center justify-center rounded-full py-6 mx-auto lg:mx-0;
   }
 
   select.general-form__input {

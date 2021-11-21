@@ -3,7 +3,7 @@
     <div>
       <Breadcrumb title="Administradores de la consola"/>
     </div>
-    <div v-if="totalResults != 0">
+    <div class="hidden lg:block" v-if="totalResults != 0">
       <div class="mt-6 flex justify-between">
         <div class="flex gap-4">
           <div class="flex items-center px-4 rounded-full bg-tertiary gap-4">

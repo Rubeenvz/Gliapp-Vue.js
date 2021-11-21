@@ -37,6 +37,13 @@
             </div>
           </router-link>
         </li>
+        <li>
+          <button class="block bg-secondary text-sm text-primary w-full lg:hidden">
+            <div class="py-3 flex items-center justify-center content-center text-center">
+              <span class="font-open font-normal text-sm text-white">Cerrar</span>
+            </div>
+          </button>
+        </li>
       </ul>
     </div>
     <div class="main-sidebar__footer p-4">

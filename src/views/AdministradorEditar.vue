@@ -11,7 +11,7 @@
           <button class="button-secondary mx-auto">Selecciona</button>
         </div>
       </div>
-      <form class="general-form__container flex flex-col gap-5">
+      <form class="general-form__container flex flex-col gap-5 w-full">
         <div class="general-form__element relative w-full hidden">
           <label class="general-form__label" for="">ID</label>
           <input required class="general-form__input" v-model="form._id" type="text">
@@ -44,7 +44,7 @@
         </div>
       </form>
     </div>
-    <div class="pt-4 border-t border-tertiary flex gap-6">
+    <div class="pt-4 border-t border-tertiary flex justify-center lg:justify-start gap-6 flex-col lg:flex-row">
       <router-link class="button-secondary" :to="'/administrador/'+id">
         Cancelar
       </router-link>
