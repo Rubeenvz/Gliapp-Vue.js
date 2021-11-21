@@ -77,6 +77,10 @@ const retrieve = async (req, res) => {
     if (data.id) {
       user = user[0]
     }
+    if (data.pageSize && data.pageNum) {
+      const total = await User.aggregate(aggregate.slice(0, 3));
+      responseObj.total = total
+    }
     if (user) {
       responseObj = {
         status: httpCode.StatusCodes.OK,

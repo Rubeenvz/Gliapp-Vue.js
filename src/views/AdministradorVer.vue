@@ -2,8 +2,8 @@
   <div>
     <div class="pt-6 mb-9">
       <div class="mb-6">
-        <div class="adm-user__img bg-primary rounded-full"></div>
-        <div>
+        <div class="adm-user__img"></div>
+        <div class="mt-4">
           <h2 class="font-open font-semibold text-primary">{{ user.name }} {{ user.last_name }} </h2>
         </div>
       </div>
@@ -66,11 +66,6 @@
 </script>
 
 <style scoped>
-  .adm-user__img {
-    width: 40px;
-    height: 40px;
-  }
-
   .adm-user__grid {
     grid-template-columns: auto auto auto;
     row-gap: 26px;

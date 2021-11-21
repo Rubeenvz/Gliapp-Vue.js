@@ -53,7 +53,7 @@
           <img class="" src="../assets/icon_approved.svg" alt="Approved">
         </div>
         <div class="mt-4">
-          <h2 class="font-semibold text-xl font-montserrat text-primary text-base">Cambios guardados.</h2>
+          <h2 class="font-semibold font-montserrat text-primary text-base">Cambios guardados.</h2>
           <p class="font-open font-normal text-sm">Tu administrador se ha guardado con éxito.</p>
         </div>
       </div>

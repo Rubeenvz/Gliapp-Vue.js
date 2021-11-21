@@ -75,4 +75,10 @@
     max-width: 200px;
     @apply mt-4 mb-6 border border-tertiary rounded;
   }
+
+  .adm-user__img {
+    width: 40px;
+    height: 40px;
+    @apply bg-primary rounded-full;
+  }
 </style>

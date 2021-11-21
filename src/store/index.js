@@ -17,10 +17,11 @@ export default new Vuex.Store({
     async getUser({ commit }, data) {
       let url = 'user/?'
       Object.entries(data).forEach(([key, value]) => {
-        url += `${key}=${value}`
+        url += `${key}=${value}&`
       });
       try {
         const res = await axios.get(`http://localhost:4800/api/${url}`)
+        console.log(res)
         commit('setUser', res.data.data)
       } catch (error) {
         commit('setUser', {})
