@@ -91,4 +91,10 @@
     height: 52px;
     @apply bg-secondary flex items-center justify-center rounded-full py-6;
   }
+
+  select.general-form__input {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+  }
 </style>

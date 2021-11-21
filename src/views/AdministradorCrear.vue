@@ -30,11 +30,17 @@
           </div>
           <div class="general-form__element relative w-full">
             <label class="general-form__label" for="">Area</label>
-            <input required class="general-form__input" v-model="form.area" type="text">
+            <select class="general-form__input" required v-model="form.area">
+              <option value="RRHH">Recursos Humanos</option>
+              <option value="IT">IT</option>
+            </select>
           </div>
           <div class="general-form__element relative w-full">
             <label class="general-form__label" for="">Estatus</label>
-            <input required class="general-form__input" v-model="form.status" type="text">
+            <select class="general-form__input" required v-model="form.status">
+              <option value="active">Activo</option>
+              <option value="inactive">Inactivo</option>
+            </select>
           </div>
         </form>
       </div>
@@ -83,7 +89,10 @@
       return {
         area,
         status,
-        form: {},
+        form: {
+          status: 'active',
+          area: 'RRHH'
+        },
         isSaved: false
       }
     },
