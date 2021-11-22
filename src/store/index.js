@@ -20,7 +20,7 @@ export default new Vuex.Store({
         url += `${key}=${value}&`
       });
       try {
-        const res = await axios.get(`http://localhost:4800/api/${url}`)
+        const res = await axios.get(`http://7e11-201-149-21-198.ngrok.io/api/${url}`)
         commit('setUser', res.data.data)
         return res
       } catch (error) {
@@ -30,7 +30,7 @@ export default new Vuex.Store({
     },
     async saveUser({ commit }, data) {
       try {
-        const res = await axios.put(`http://localhost:4800/api/user`, data)
+        const res = await axios.put(`https://7e11-201-149-21-198.ngrok.io/api/user`, data)
         commit('setUser', res.data.data)
         return res
       } catch (error) {
@@ -40,7 +40,7 @@ export default new Vuex.Store({
     },
     async createUser({ commit }, data) {
       try {
-        const res = await axios.post(`http://localhost:4800/api/user`, data)
+        const res = await axios.post(`https://7e11-201-149-21-198.ngrok.io/api/user`, data)
         return res
       } catch (error) {
         commit('setUser', {})
@@ -49,7 +49,7 @@ export default new Vuex.Store({
     },
     async removeUser({ commit }, data) {
       try {
-        const res = await axios.delete(`http://localhost:4800/api/user/?_id=${data._id}`)
+        const res = await axios.delete(`https://7e11-201-149-21-198.ngrok.io/api/user/?_id=${data._id}`)
         return res
       } catch (error) {
         commit('setUser', {})
