@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "2191b78d-3aef-4b63-8427-407101dc2304",
+		"_postman_id": "453f8165-e4ea-415e-a744-1a6e2faf76ac",
 		"name": "Gliapp",
 		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
 	},
@@ -12,14 +12,14 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n  \"name\": \"Héctor\",\n  \"last_name\": \"Vázquez\",\n  \"email\": \"rubeenvz@outlook.com\",\n  \"status\": \"active\",\n  \"area\": \"IT\"\n}",
+					"raw": "{\n  \"name\": \"Rubén\",\n  \"last_name\": \"Vázquez\",\n  \"email\": \"rubeen@outlook.com\",\n  \"status\": \"active\",\n  \"area\": \"IT\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
 						}
 					}
 				},
-				"url": "localhost:4800/api/user/"
+				"url": "http://7e11-201-149-21-198.ngrok.io/api/user/"
 			},
 			"response": []
 		},
@@ -40,7 +40,30 @@
 						}
 					}
 				},
-				"url": "localhost:4800/api/user/"
+				"url": {
+					"raw": "http://7e11-201-149-21-198.ngrok.io/api/user/?pageSize=5&pageNum=1",
+					"protocol": "http",
+					"host": [
+						"7e11-201-149-21-198",
+						"ngrok",
+						"io"
+					],
+					"path": [
+						"api",
+						"user",
+						""
+					],
+					"query": [
+						{
+							"key": "pageSize",
+							"value": "5"
+						},
+						{
+							"key": "pageNum",
+							"value": "1"
+						}
+					]
+				}
 			},
 			"response": []
 		},
@@ -50,11 +73,13 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "localhost:4800/api/user/?id=6195e45cfc099d99e085c0a3",
+					"raw": "http://7e11-201-149-21-198.ngrok.io/api/user/?id=6197e4c9e54ac10c4e48e99e",
+					"protocol": "http",
 					"host": [
-						"localhost"
+						"7e11-201-149-21-198",
+						"ngrok",
+						"io"
 					],
-					"port": "4800",
 					"path": [
 						"api",
 						"user",
@@ -63,7 +88,7 @@
 					"query": [
 						{
 							"key": "id",
-							"value": "6195e45cfc099d99e085c0a3"
+							"value": "6197e4c9e54ac10c4e48e99e"
 						}
 					]
 				}
@@ -84,7 +109,7 @@
 						}
 					}
 				},
-				"url": "localhost:4800/api/user/"
+				"url": "http://7e11-201-149-21-198.ngrok.io/api/user/"
 			},
 			"response": []
 		},
@@ -102,7 +127,7 @@
 						}
 					}
 				},
-				"url": "localhost:4800/api/user/"
+				"url": "http://7e11-201-149-21-198.ngrok.io/api/user/"
 			},
 			"response": []
 		}

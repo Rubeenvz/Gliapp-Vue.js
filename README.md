@@ -29,6 +29,12 @@ npm i
 npm run dev
 ```
 
+#### Postman
+Archivo de postman para probar los servicios:
+```
+Gliapp.postman_collection.json
+```
+
 ![Gliapp](https://raw.githubusercontent.com/Rubeenvz/Gliapp-Vue.js/main/img/img(0).png)
 ![Gliapp](https://raw.githubusercontent.com/Rubeenvz/Gliapp-Vue.js/main/img/img(1).png)
 ![Gliapp](https://raw.githubusercontent.com/Rubeenvz/Gliapp-Vue.js/main/img/img(2).png)
